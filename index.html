@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>מבוך</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body dir="rtl" class="Aligner">
+    <div class="centered">
+      <h1>מה נשמע מותק?</h1>
+      <div class="strech">
+        <div><a href="כיוונים\yemina.html">לך ימינה</a></div>
+        <div><a href="כיוונים\smola.html">לך שמאלה</a></div>
+      </div>
+    </div>
+    <script>
+      let links = document.querySelectorAll("a");
+      console.log(links);
+      links.forEach(link => {
+        link.onmouseover = function(e) {
+          setTimeout(() => {
+            e.target.style.color = "yellow";
+            this.onmouseout = function(e) {
+              this.style.color = "red";
+            };
+          }, 1000);
+        };
+      });
+    </script>
+  </body>
+</html>
